@@ -3,3 +3,8 @@ my-jshell-app/create.sql
 my-jshell-app/drop.sql
 my-jshell-app/*.log
 my-jshell-app/.settings
+my-jshell-app/target/archive-tmp
+my-jshell-app/target/generated-sources
+my-jshell-app/target/maven-archiver
+my-jshell-app/target/maven-status
+my-jshell-app/target/surefire-reports
