@@ -32,5 +32,20 @@ Comandos no Terminal
 
 Rodando com JShell no conteiner
 
-    
+    ./build-jshell
+    docker run -i -t --rm --name jshell \
+           --link mysql_db:mysql \
+           parana/jshell bash
+
+    # Verificando a existencia de persistence.xml
+    jar -tvf target/myJshellAppLib.jar META-INF/persistence.xml
+    # Testando o JAR existente na console
+    java -jar target/myJshellAppLib.jar
+    # Testando o JShell
+    jshell
+    /classpath target/myJshellAppLib.jar 
+    import br.com.joaoparana.*
+    App app = new App()
+    String[] args = {}
+    App.main(args)
     

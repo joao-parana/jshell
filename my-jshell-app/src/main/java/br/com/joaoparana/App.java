@@ -38,6 +38,9 @@ public class App {
 		DoJPA jpa = new DoJPA(emf);
 		jpa.startPersistence();
 		jpa.close();
+		System.out.println("\n\nYou can test this Class using JShell\n\n    jshell\n"
+				+ "    /classpath target/myJshellAppLib.jar\n" + "    import br.com.joaoparana.*\n"
+				+ "    App app = new App()\n" + "    String[] args = {}\n" + "    App.main(args)\n");
 	}
 
 	public static EntityManagerFactory getEMF(DBMS dbms) throws UnknownHostException {
