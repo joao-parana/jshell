@@ -1,4 +1,3 @@
-bin/
 my-jshell-app/create.sql
 my-jshell-app/drop.sql
 my-jshell-app/*.log

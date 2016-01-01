@@ -1,1 +1,6 @@
-/target/
+target/archive-tmp
+target/generated-sources
+target/maven-archiver
+target/maven-status
+target/surefire-reports
+

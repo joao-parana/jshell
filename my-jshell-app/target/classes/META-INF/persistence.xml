@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+          http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0">
+	<persistence-unit name="myPersistence"
+		transaction-type="RESOURCE_LOCAL">
+		<!-- Provider class name is required in Java SE -->
+		<provider>
+			org.eclipse.persistence.jpa.PersistenceProvider
+		</provider>
+
+		<!-- All persistence classes must be listed below -->
+
+		<class>br.com.joaoparana.model.User</class>
+
+		<properties>
+			<property name="eclipselink.logging.level" value="INFO" />
+			<!-- create-tables , drop-and-create-tables or none -->
+			<property name="eclipselink.ddl-generation" value="create-tables" />
+			<property name="eclipselink.ddl-generation.output-mode"
+				value="both" />
+			<property name="eclipselink.create-ddl-jdbc-file-name"
+				value="create.sql" />
+			<property name="eclipselink.drop-ddl-jdbc-file-name" value="drop.sql" />
+			<property name="eclipselink.application-location" value="." />
+			<!-- Valores para CacheType: Full, Weak, Soft, SoftWeak, HardWeak, NONE -->
+			<property name="org.eclipse.persistence.config.CacheType"
+				value="SoftWeak" />
+			<!-- Enable or disable EclipseLink's generation of database platform-specific 
+				SQL (as opposed to generic SQL) -->
+			<property name="eclipselink.jdbc.native-sql" value="true" />
+			<property name="eclipselink.jdbc.batch-writing" value="JDBC" />
+		</properties>
+	</persistence-unit>
+</persistence>

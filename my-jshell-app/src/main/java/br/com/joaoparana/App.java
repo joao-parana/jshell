@@ -31,9 +31,9 @@ import org.eclipse.persistence.config.TargetServer;
  */
 public class App {
 	public static void main(String[] args) throws Exception {
-		DuckType duckType = new DuckType();
-		duckType.example();
-		System.out.println("Hello JPA!");
+		// DuckType duckType = new DuckType();
+		// duckType.example();
+		System.out.println("Starting JPA Test with MySql Database");
 		EntityManagerFactory emf = getEMF(DBMS.MySQL);
 		DoJPA jpa = new DoJPA(emf);
 		jpa.startPersistence();
