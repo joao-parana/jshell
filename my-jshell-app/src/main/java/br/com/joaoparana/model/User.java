@@ -1,5 +1,23 @@
 package br.com.joaoparana.model;
 
-public class User {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+@Entity
+public class User {
+	@Id
+	@GeneratedValue
+	long cpf;
+	String name;
+
+	public User() {
+		super();
+		this.name = "*NONE*";
+	}
+
+	public User(String name) {
+		super();
+		this.name = name;
+	}
 }
