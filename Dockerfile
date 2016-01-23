@@ -4,7 +4,7 @@ FROM parana/java-jdk9:latest
 #
 MAINTAINER João Antonio Ferreira "joao.parana@gmail.com"
 
-ENV REFRESHED_AT 2015-12-30
+ENV REFRESHED_AT 2016-01-23
 
 #
 RUN mkdir /my-jshell-app
