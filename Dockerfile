@@ -6,6 +6,8 @@ MAINTAINER João Antonio Ferreira "joao.parana@gmail.com"
 
 ENV REFRESHED_AT 2016-08-03
 
+RUN apt-get update && apt-get install -y vim && apt-get clean
+
 #
 RUN mkdir /my-jshell-app
 ADD my-jshell-app /my-jshell-app
