@@ -46,6 +46,15 @@ Rodando com JShell no conteiner
     /classpath target/myJshellAppLib.jar 
     import br.com.joaoparana.*
     App app = new App()
-    String[] args = {}
+    String[] args = { "HELP" }
     App.main(args)
     
+    long fibonacci(int n) {
+      if (n < 2) {
+        return n;
+      }
+      return fibonacci(n-1) + fibonacci(n-2);
+    }
+    import java.util.stream.*
+    Stream.of(20,30,40,50).map(i -> fibonacci(i)).forEach(System.out::println)
+
