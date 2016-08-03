@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+export HUB_USER_NAME=parana
+
+echo "You can run this commands using jshell " && \
+echo "/classpath target/myJshellAppLib.jar " && \
+echo "import br.com.joaoparana.*" && \
+echo "App app = new App()" && \
+echo "String[] args = {"\"JPA"\"}" && \
+echo "App.main(args)" 
+
+docker run -i -t --rm --name jshell --link mysql_db:mysql $HUB_USER_NAME/jshell bash
+

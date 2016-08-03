@@ -23,7 +23,7 @@ Comandos no Terminal
            -e MYSQL_DATABASE=test \
            -e MYSQL_USER=test \
            -e MYSQL_PASSWORD=test \
-           mariadb bash
+           mariadb
     mysql -u root -h dockerhost.local -p # Informar senha xpto
     mysql> show databases;
     mysql> use test;

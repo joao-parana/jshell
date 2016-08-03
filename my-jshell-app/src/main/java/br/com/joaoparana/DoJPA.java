@@ -19,15 +19,15 @@ public class DoJPA {
 		if (this.emf.getProperties().containsKey(JDBC_URL)) {
 			url = (String) this.emf.getProperties().get(JDBC_URL);
 			if (url.startsWith("jdbc:mysql")) {
-				cmd = "select 1;";
+				cmd = "select 1000;";
 			} else if (url.startsWith("jdbc:oracle")) {
-				cmd = "select 1 from dual;";
+				cmd = "select 1000 from dual;";
 			}
 
 			EntityManager em = getEntityManager();
 			Query q = em.createNativeQuery(cmd);
 			Long r = (Long) q.getSingleResult();
-			System.out.println(r);
+			System.out.println("The value returned must be 1000. Please verify -> " + r);
 		}
 
 		if (url.startsWith("jdbc:mysql")) {
